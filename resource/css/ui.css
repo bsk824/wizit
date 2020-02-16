@@ -1,1 +1,468 @@
 @charset "utf-8";
+
+.wrapProgress:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.wrapProgress .box {
+	float: left;
+	width: 50%; height: 268px;
+	padding: 18px 0 0;
+	box-sizing: border-box;
+}
+.wrapProgress .box:first-child {border-right: 1px solid rgba(255,255,255,.2);}
+.wrapProgress .tit {
+	margin-left: 25px;
+	font-size: 20px;
+	font-weight: 200;
+}
+.wrapProgress .cont {margin: 0 40px;}
+.wrapProgress .progress {
+	position: relative;
+	margin: 40px 0 0;
+}
+.wrapProgress .progress .str {
+	font-size: 16px;
+	font-weight: 300;
+}
+.wrapProgress .progress .barBack {
+	display: block;
+	height: 5px;
+	margin: 8px 0 0;
+	border-radius: 5px;
+	background: #dadada;
+	font-size: 0;
+}
+.wrapProgress .progress .bar {
+	display: inline-block;
+	height: 5px;
+	background-image: linear-gradient(to right, #fdbb7d , #ff515d);
+	border-radius: 5px;
+}
+.wrapProgress .progress .bar:after {
+	content: "";
+	float: right;
+	width: 15px; height: 15px;
+	margin-top: -5px;
+	background: #ff515d;
+	border-radius: 50%;
+}
+.wrapProgress .progress .num {
+	position: absolute;
+	right: 0; bottom: 5px;
+	font-size: 45px;
+	font-weight: 400;
+}
+.wrapProgress .progress.barType2 .str {
+	font-size: 15px;
+	opacity: .7;
+}
+.wrapProgress .progress.barType2 .num {
+	font-size: 35px;
+	opacity: .7;
+}
+.wrapProgress .progress.barType2 .bar {background-image: linear-gradient(to right, #f348a8 , #891efd);}
+.wrapProgress .progress.barType2 .bar:after {background: #9521f6;}
+.wrapProgress .unit {
+	margin: 20px 0 0;
+	text-align: right;
+	font-size: 17px;
+	color: #ccc;
+}
+.wrapUseVal {border-top: 1px solid rgba(255,255,255,.2);}
+.wrapUseVal:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.wrapUseVal .box {
+	float: left;
+	width: 25%; height: 190px;
+	box-sizing: border-box;
+}
+.wrapUseVal .box .item {height: 130px;}
+.wrapUseVal .box .item .tit {
+	display: block;
+	height: 50%;
+	padding: 0 0 0 25px;
+	font-size: 22px;
+	font-weight: 200;
+	line-height: 60px;
+}
+.wrapUseVal .box .item .val {
+	display: block;
+	height: 50%;
+	background: #2e5981;
+	font-size: 35px;
+	font-weight: 400;
+	line-height: 60px;
+	text-align: center;
+}
+.wrapUseVal .box .unit {
+	clear: both;
+	padding: 17px 25px 0 0;
+	color: #e5e5e5;
+	font-size: 17px;
+	text-align: right;
+}
+.wrapUseVal .box:first-child {
+	width: 75%;
+	border-right: 1px solid rgba(255,255,255,.2);
+}
+.wrapUseVal .box:first-child .item {
+	float: left;
+	width: 200px;
+	box-sizing: border-box;
+	border-left: 1px solid rgba(255,255,255,.2);
+}
+.wrapUseVal .box:first-child .item:first-child {
+	width: 199px;
+	border: 0;
+}
+.wrapUseVal .box:first-child .item .val {background: #3a4989;}
+
+.connectChart {height: 239px;}
+.connectChart .box {
+	position: relative;
+	float: left;
+	width: 50%; height: 100%;
+	box-sizing: border-box;
+}
+.connectChart .box:first-child {
+	border-right: 1px solid rgba(255,255,255,.2);
+}
+.connectChart .valTxt {
+	float: left;
+	padding: 20px 80px 0 25px;
+}
+
+.wrapPeriod .valTxt {float: left;}
+.wrapPeriod .wrapTable {
+	float: right;
+	width: 970px;
+}
+
+.noticeList li + li {
+	border-top: 1px dashed #535a6c;
+}
+.noticeList a {
+	display: inline-block;
+	max-width: 100%;
+	margin: 16px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.noticeList .num {
+	display: inline-block;
+	width: 28px; line-height: 28px;
+	margin-right: 15px;
+	border: 1px solid;
+	border-radius: 50%;
+	vertical-align: 5;
+	text-align: center;
+}
+
+.wrapTopInfo {
+	display: table;
+	width: 100%;
+}
+.wrapTopInfo .wrapSearch {
+	display: table-cell;
+	position: relative;
+	padding-left: 175px;
+	border-right: 1px dashed #5b6589;
+}
+.wrapTopInfo .wrapSearch .btnType2L {
+	position: absolute;
+	top: 60px; left: 25px;
+	width: 130px;
+	padding: 0;
+}
+.wrapTopInfo .wrapSearch .wrapSelItem {
+	position: relative;
+	padding: 24px 30px 30px 0;
+}
+.wrapTopInfo .wrapSearch .wrapSelItem .txt {font-size: 17px;}
+.wrapTopInfo .wrapSearch .wrapSelItem .btnLink {
+	position: absolute;
+	top: 25px; right: 30px;
+	font-size: 17px;
+	font-weight: 500;
+	color: #5c77ff;
+}
+.wrapTopInfo .wrapSearch .wrapSelItem .itemList {
+	min-height: 60px;
+	margin: 10px 0 0;
+	padding: 8px 10px;
+	background: #232b4b;
+	border-radius: 4px;
+}
+.wrapTopInfo .wrapSearch .wrapSelItem .itemList .item {
+	display: inline-block;
+	margin: 2px 0;
+	padding: 5px 8px;
+	background: #6d779a;
+	line-height: 1;
+	border-radius: 4px;
+}
+.wrapTopInfo .wrapSearch .wrapSelItem .itemList .item button {
+	width: 13px; height: 13px;
+	margin-left: 10px;
+	font-size: 0;
+	background: url('/wizit/resource/images/btn_del.png') no-repeat;
+	vertical-align: middle;
+}
+.wrapTopInfo .wrapPeriodSel {
+	display: table-cell;
+	position: relative;
+	width: 350px;
+	padding: 0 30px;
+	border-right: 1px dashed #5b6589;
+	box-sizing: border-box;
+}
+.wrapTopInfo .wrapPeriodSel .tit {margin: 0 0 10px;}
+.wrapTopInfo .wrapPeriodSel div {margin: 0 0 5px;}
+.wrapTopInfo .wrapPeriodSel .inputTxt {width: 100px; margin-left: 8px;}
+.wrapTopInfo .wrapPeriodSel select {margin-left: 4px;}
+
+.wrapTopInfo .wrapChartList {
+	position: relative;
+	display: table-cell;
+	width: 300px;
+	padding: 0 30px;
+	box-sizing: border-box;
+}
+.wrapTopInfo .wrapChartList .list {margin-top: 10px;}
+.wrapTopInfo .wrapChartList .list button {
+	width: 75px; height: 25px;
+	background: #2b355b;
+	border-radius: 4px;
+}
+.wrapTopInfo .wrapChartList .list button.on {
+	background: #009688;
+}
+.wrapTopInfo .opt {
+	display: table-cell;
+	width: 180px;
+	padding-top: 60px;
+	text-align: center;
+	vertical-align: top;
+}
+.wrapTopInfo .opt .btnArrow {
+	position: absolute;
+	right: 25px; bottom: 20px;
+	width: 29px; height: 15px;
+	background: url('/wizit/resource/images/btn_arrow_down.png') no-repeat;
+	font-size: 0;
+}
+
+.wrapTopInfo .layerPop {top: 60px;}
+
+.wrapRealTime:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.wrapRealTime .tabChart {
+	float: left;
+	width: 200px;
+	overflow: hidden;
+	border-radius: 0 0 0 5px;
+	border-right: 1px solid #6d78ad;
+}
+.wrapRealTime .tabChart button {
+	width: 100%; height: 63px;
+	padding-left: 30px;
+	text-align: left;
+	font-size: 20px;
+}
+.wrapRealTime .tabChart button + button {border-top: 1px solid #6d78ad;}
+.wrapRealTime .tabChart button.on {background: #5c77ff url('/wizit/resource/images/ico_tab_active.png') no-repeat 90% 50%;}
+
+.wrapRealTime .wrapChart {
+	float: left;
+	padding-left: 180px;
+}
+
+.wrapSearchSel {
+	border-radius: 4px;
+	overflow: hidden;
+}
+.wrapSearchSel table {table-layout: auto;}
+.wrapSearchSel thead th {
+	height: 50px;
+	padding: 0 9px;
+	background: #425ad3;
+	border-left: 1px solid #8e92a6;
+	font-weight: 400;
+	text-align: left;
+}
+.wrapSearchSel td {
+	background: #fff;
+	border-left: 1px solid #c8ccd5;
+	vertical-align: top;
+	font-weight: 300;
+}
+.wrapSearchSel thead th:first-child,
+.wrapSearchSel td:first-child {border: 0;}
+.wrapSearchSel .selList {
+	height: 200px;
+	overflow: auto;
+}
+.wrapSearchSel .selList label {
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+.wrapSearchSel .selList label input {
+	position: absolute;
+	z-index: -1;
+}
+.wrapSearchSel .selList label span {
+	display: block;
+	padding: 4px 9px;
+	color: #333;
+}
+.wrapSearchSel .selList label input:checked + span {background: #d9dce9;}
+.chkSelList {
+	padding-top: 50px;
+	background: url('/wizit/resource/images/bg_change.png') no-repeat 50% 16px;
+}
+.chkSelList .tit {
+	height: 37px;
+	padding: 13px 9px 0;
+	background: #425ad3;
+	border-radius: 4px 4px 0 0;
+}
+.chkSelList .list {
+	height: 200px;
+	overflow: auto;
+	background: #fff;
+	border-radius: 0 0 4px 4px;
+}
+.chkSelList .list li {
+	color: #333;
+	padding: 4px 9px;
+}
+
+.levelList {
+	position: relative;
+	background: #425ad3;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.levelList .thead {line-height: 50px;}
+.levelList .thead div {float: left;}
+.levelList .thead div:before {
+	content: "";
+	position: absolute;
+	top: 50px; bottom: 0;
+	border-left: 1px solid #c8ccd5;
+}
+.levelList .thead div:first-child:before {border: 0;}
+.levelList .thead div:first-child span {border: 0;}
+.levelList .thead span {
+	display: block;
+	border-left: 1px solid #8e92a6;
+	text-align: center;
+}
+.levelList .tbody {
+	margin-top: 50px;
+	background: #fff;
+}
+.levelList .tbody div {
+	position: relative;
+	height: 40px;
+	color: #4c4c4c;
+	line-height: 40px;
+}
+.levelList .tbody > li + li {
+	position: relative;
+	margin-top: -1px;
+	border-top: 1px solid #394565;
+}
+.levelList .tbody > li > div {padding-left: 50px;}
+.levelList .tbody > li > div .name {
+	width: 310px;
+	padding-left: 10px;
+}
+.levelList .tbody .subDepth {
+	display: none;
+	margin-left: 300px;
+}
+.levelList .tbody .open > .subDepth {display: block;}
+.levelList .tbody .subDepth div {
+	margin-top: -1px;
+	border-top: 1px solid #c8ccd5;
+}
+.levelList .tbody > li > .subDepth {margin-left: 360px;}
+.levelList .tbody .num {
+	position: absolute;
+	top: 0; left: 0;
+	width: 50px;
+	text-align: center;
+}
+.levelList .tbody .cell {
+	float: left;
+	box-sizing: border-box;
+	width: 300px;
+	padding-left: 10px;
+}
+.levelList .tbody .name {padding-left: 45px;}
+.levelList .tbody .btn {
+	float: left;
+	width: 210px;
+	padding: 5px 0;
+	text-align: center;
+	line-height: 1;
+}
+.levelList .tbody .rightCell {
+	position: absolute;
+	top: 0; right: 0;
+}
+.levelList .tbody .btnDepth {
+	width: 30px; height: 30px;
+	margin-top: 4px;
+	font-size: 0;
+	border-radius: 4px;
+	background: #323e6b url('/wizit/resource/images/btn_plus2.png') no-repeat 50% 50%;
+	border: 1px solid #323e6b;
+	vertical-align: top;
+}
+.levelList .tbody .open > div > .cell > .btnDepth {
+	background: #fff url('/wizit/resource/images/btn_minus.png') no-repeat 50% 50%
+}
+
+.layerMenuSet {
+	display: none;
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 1000;
+	background: rgba(0,0,0,.45);
+}
+.wrapMenuSet {
+	position: absolute;
+	top: 0; right: 0; bottom: 0;
+	width: 600px;
+	background: #283147;
+	overflow: auto;
+}
+.wrapMenuSet .tit {
+	padding: 14px 30px 20px;
+	border-bottom: 1px solid #9498a3;
+	font-size: 22px;
+	font-weight: 300;
+}
+.wrapMenuSet .inner {padding: 20px 30px;}
+.wrapMenuSet .inner label {
+	display: block;
+	margin: 0 0 8px;
+	font-size: 17px;
+	font-weight: 300;
+}
+.wrapMenuSet .inner label ~ label {margin-top: 15px;}
+.wrapMenuSet .inner select {width: 100%;}
+.wrapMenuSet .inner textarea {width: 100%; height:170px;}
+.wrapMenuSet .helpTxt {color: #ccc;}

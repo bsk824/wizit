@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>WIZIT</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="/wizit/resource/fonts/font.css">
+	<link rel="stylesheet" href="/wizit/resource/css/common.css">
+	<link rel="stylesheet" href="/wizit/resource/css/ui.css">
+	<script src="/wizit/resource/js/jquery.min.js"></script>
+	<script src="/wizit/resource/js/ui.js"></script>
+</head>
+<body>
+	
+	<div id="wrap">
+
+		<header id="header">
+			<div class="wrapCont">
+				<h1 class="logo">
+					<a href="/wizit/">
+						<img src="/wizit/resource/images/logo.png" alt="WIZIT">
+						<span>산업용 열량계 원격검침 데이터 분석 시스템</span>
+					</a>
+				</h1>
+				<nav>
+					<ul class="gnbList">
+						<li class="gnb1"><a href="dashboard.html">대시보드</a></li>
+						<li class="gnb2"><a href="monitoring.html">모니터링</a></li>
+						<li class="gnb3"><a href="usageAnalysis.html">사용량분석</a></li>
+						<li class="gnb4"><a href="disorderAnalysis.html">장애분석</a></li>
+						<li class="gnb5"><a href="setting.html">설정</a>
+							<div class="subList">
+								<ul>
+									<li><a href="setting.html">열량계 그룹 관리</a></li>
+									<li><a href="setting2.html">열량계 리스트</a></li>
+									<li><a href="setting3.html">사용자/권한 관리</a></li>
+									<li><a href="setting4.html">메뉴 관리</a></li>
+									<li><a href="setting5.html">공통코드 관리</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<ul class="utilList">
+						<li class="util1"><a href="#"><span class="hidden">알림</span><span class="count">20</span></a></li>
+						<li class="util2"><a href="#"><span class="hidden">??</span></a></li>
+						<li class="util3"><a href="#"><span class="hidden">??</span></a></li>
+						<li class="util4"><a href="#"><span class="hidden">??</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="container">
+			<div class="pageHead">
+				<h2 class="pageTitle">사용자/권한 관리</h2>
+				<p class="currentTime">현재 시간 2020-01-28 22:00:00</p>
+			</div>
+
+			<section class="sectionBox">
+				<div class="subHead">
+					<span class="cell">
+						<label for="groupRole" class="tit">그룹 ROLE</label>
+						<select id="groupRole" style="width: 180px;">
+							<option value="">선택</option>
+						</select>
+					</span>
+					<span class="cell">
+						<label for="groupSearch" class="tit">조건검색</label>
+						<select id="groupSearch" style="width: 180px;">
+							<option value="">선택</option>
+						</select>
+						<input type="text" class="inputTxt" placeholder="Search" style="width: 400px;">
+					</span>
+					<span class="cell">
+						<button type="button" class="btnType1M typeSearch">Search</button>
+						<button type="button" class="btnType3M typeClear">Clear</button>
+					</span>
+					<span class="cellRight">
+						<button type="button" class="btnType2M">등록</button>
+					</span>
+				</div>
+
+				<div class="boxInner">
+					<div class="wrapTable">
+						<table>
+							<caption>사용자/권한 관리 설정</caption>
+							<colgroup>
+								<col style="width:170px;">
+								<col style="width:180px;">
+								<col style="width:220px;">
+								<col style="width:180px;">
+								<col style="width:160px;">
+								<col style="width:160px;">
+								<col style="width:180px;">
+								<col style="width:180px;">
+								<col style="width:180px;">
+								<col style="width:80px;">
+								<col style="width:80px;">
+							</colgroup>
+							<thead class="theadType2">
+								<tr>
+									<th scope="col" class="bg">그룹ID</th>
+									<th scope="col" class="bg">그룹명</th>
+									<th scope="col" class="bg">그룹ROLE</th>
+									<th scope="col" class="bg">비고</th>
+									<th scope="col" class="bg">생성자</th>
+									<th scope="col" class="bg">생성일자</th>
+									<th scope="col" class="bg">사용자수</th>
+									<th scope="col" class="bg">권한관리</th>
+									<th scope="col" class="bg">사용자관리</th>
+									<th scope="col" class="bg">수정</th>
+									<th scope="col" class="bg">삭제</th>
+								</tr>
+							</thead>
+							<tbody class="center">
+								<tr>
+									<td>admin_group</td>
+									<td>어드민그룹</td>
+									<td>일반 관리자 (ROLE010001)</td>
+									<td></td>
+									<td>sysadmin</td>
+									<td>2020-01-15</td>
+									<td>0명</td>
+									<td><button type="button" class="btnType4S">권한관리</button></td>
+									<td><button type="button" class="btnType5S">사용자관리</button></td>
+									<td><button type="button" class="btnType3S">수정</button></td>
+									<td><button type="button" class="btnType6S">삭제</button></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>test_group</td>
+									<td>test_group</td>
+									<td>일반 관리자 (ROLE010001)</td>
+									<td></td>
+									<td>sysadmin</td>
+									<td>2020-01-15</td>
+									<td>0명</td>
+									<td><button type="button" class="btnType4S">권한관리</button></td>
+									<td><button type="button" class="btnType5S">사용자관리</button></td>
+									<td><button type="button" class="btnType3S">수정</button></td>
+									<td><button type="button" class="btnType6S">삭제</button></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+
+			</section>
+
+
+		</section>
+
+		<footer id="footer">
+			<div class="wrapCont">
+				<nav class="footLink">
+					<a href="#">서비스 이용약관</a>
+					<a href="#">개인정보처리방침</a>
+					<a href="#">이메일 무단수집거부</a>
+				</nav>
+				<p class="corpInfo">21634) 인천광역시 남동구 남동서로 187 (고잔동, 58B/5L) <span>|</span> TEL. 032-820-9900 <span>|</span> FAX. 032-822-9192</p>
+				<small class="copyright">Copyright &copy; 2020 by WIZIT All rights reserved.</small>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>

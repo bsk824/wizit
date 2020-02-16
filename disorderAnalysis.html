@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>WIZIT</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="/wizit/resource/fonts/font.css">
+	<link rel="stylesheet" href="/wizit/resource/css/common.css">
+	<link rel="stylesheet" href="/wizit/resource/css/ui.css">
+	<script src="/wizit/resource/js/jquery.min.js"></script>
+	<script src="/wizit/resource/js/ui.js"></script>
+</head>
+<body>
+	
+	<div id="wrap">
+
+		<header id="header">
+			<div class="wrapCont">
+				<h1 class="logo">
+					<a href="/wizit/">
+						<img src="/wizit/resource/images/logo.png" alt="WIZIT">
+						<span>산업용 열량계 원격검침 데이터 분석 시스템</span>
+					</a>
+				</h1>
+				<nav>
+					<ul class="gnbList">
+						<li class="gnb1"><a href="dashboard.html">대시보드</a></li>
+						<li class="gnb2"><a href="monitoring.html">모니터링</a></li>
+						<li class="gnb3"><a href="usageAnalysis.html">사용량분석</a></li>
+						<li class="gnb4"><a href="disorderAnalysis.html">장애분석</a></li>
+						<li class="gnb5"><a href="setting.html">설정</a>
+							<div class="subList">
+								<ul>
+									<li><a href="setting.html">열량계 그룹 관리</a></li>
+									<li><a href="setting2.html">열량계 리스트</a></li>
+									<li><a href="setting3.html">사용자/권한 관리</a></li>
+									<li><a href="setting4.html">메뉴 관리</a></li>
+									<li><a href="setting5.html">공통코드 관리</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<ul class="utilList">
+						<li class="util1"><a href="#"><span class="hidden">알림</span><span class="count">20</span></a></li>
+						<li class="util2"><a href="#"><span class="hidden">??</span></a></li>
+						<li class="util3"><a href="#"><span class="hidden">??</span></a></li>
+						<li class="util4"><a href="#"><span class="hidden">??</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="container">
+			<div class="pageHead">
+				<h2 class="pageTitle">장애분석</h2>
+				<p class="baseTime"><span>기준 시간 2020-01-28 22:00:00</span> <button type="button" class="btnTooltip">안내</button></p>
+				<p class="currentTime">현재 시간 2020-01-28 22:00:00</p>
+			</div>
+
+			<section class="sectionBox2 wrapTopInfo">
+				<div class="wrapSearch">
+					<button type="button" class="btnType2L typePlus" onclick="layer.open('layerSearchSel');">열량계 조회</button>
+
+					<!-- 조회 -->
+					<section class="layerPop" id="layerSearchSel">
+						<h3 class="layerTitle">열량계 조회</h3>
+						<div class="layerContents">
+							<div class="wrapSearchSel">
+								<table>
+									<caption>열량계 조회 선택</caption>
+									<colgroup>
+										<col style="width: 160px;">
+										<col style="width: 160px;">
+										<col style="width: 160px;">
+										<col style="width: 160px;">
+										<col style="width: 160px;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">선택 <button type="button">검색</button></th>
+											<th scope="col">마스터그룹</th>
+											<th scope="col">그룹2레벨 <button type="button">검색</button></th>
+											<th scope="col">그룹3레벨 <button type="button">검색</button></th>
+											<th scope="col">열량계</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="selList">
+													<label><input type="radio" name="sel1"> <span>전체 열량계</span></label>
+													<label><input type="radio" name="sel1"> <span>선택 열량계</span></label>
+													<label><input type="radio" name="sel1"> <span>냉방 열량계</span></label>
+													<label><input type="radio" name="sel1"> <span>난방 열량계</span></label>
+													<label><input type="radio" name="sel1"> <span>급탕 열량계</span></label>
+												</div>
+											</td>
+											<td>
+												<div class="selList">
+													<label><input type="radio" name="sel2"> <span>서울특별시</span></label>
+													<label><input type="radio" name="sel2"> <span>성남시</span></label>
+												</div>
+											</td>
+											<td>
+												<div class="selList">
+													<label><input type="radio" name="sel3"> <span>중원구</span></label>
+													<label><input type="radio" name="sel3"> <span>분당구</span></label>
+												</div>
+											</td>
+											<td>
+												<div class="selList">
+													<label><input type="radio" name="sel3"> <span>풍림아이원</span></label>
+													<label><input type="radio" name="sel3"> <span>분당차병원</span></label>
+													<label><input type="radio" name="sel3"> <span>판교현대백화점</span></label>
+													<label><input type="radio" name="sel3"> <span>분당재생병원</span></label>
+												</div>
+											</td>
+											<td>
+												<div class="selList">
+													<label><input type="checkbox" name="selChk1"> <span>열량계00001</span></label>
+													<label><input type="checkbox" name="selChk2"> <span>열량계00002</span></label>
+													<label><input type="checkbox" name="selChk3"> <span>열량계00003</span></label>
+													<label><input type="checkbox" name="selChk4"> <span>열량계00004</span></label>
+													<label><input type="checkbox" name="selChk5"> <span>열량계00005</span></label>
+													<label><input type="checkbox" name="selChk6"> <span>열량계00006</span></label>
+													<label><input type="checkbox" name="selChk7"> <span>열량계00007</span></label>
+													<label><input type="checkbox" name="selChk8"> <span>열량계00008</span></label>
+													<label><input type="checkbox" name="selChk9"> <span>열량계00009</span></label>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="chkSelList">
+								<p class="tit">선택된 열량계 목록 (3)</p>
+								<div class="list">
+									<ul>
+										<li>성남시.. / 분당구 / 풍람아.. / 열량계 00001</li>
+										<li>성남시.. / 분당구 / 풍람아.. / 열량계 00002</li>
+										<li>성남시.. / 분당구 / 풍람아.. / 열량계 00003</li>
+										<li>성남시.. / 분당구 / 풍람아.. / 열량계 00001</li>
+										<li>성남시.. / 분당구 / 풍람아.. / 열량계 00002</li>
+										<li>성남시.. / 분당구 / 풍람아.. / 열량계 00003</li>
+										<li>성남시.. / 분당구 / 풍람아.. / 열량계 00001</li>
+										<li>성남시.. / 분당구 / 풍람아.. / 열량계 00002</li>
+										<li>성남시.. / 분당구 / 풍람아.. / 열량계 00003</li>
+									</ul>
+								</div>
+							</div>
+							<div class="btnWrap">
+								<button type="button" class="btnType2M">선택</button>
+								<button type="button" class="btnType3M">취소</button>
+							</div>
+						</div>
+						<button type="button" class="btnClose" onclick="layer.close();">닫기</button>
+					</section>
+					<!--  -->
+
+					<div class="wrapSelItem">
+						<p class="txt">선택된 열량계 : 3개</p>
+						<a href="#" class="btnLink">상세보기</a>
+						<div class="itemList">
+							<span class="item">열량계00001 <button type="button">삭제</button></span>
+							<span class="item">열량계00002 <button type="button">삭제</button></span>
+							<span class="item">열량계00003 <button type="button">삭제</button></span>
+						</div>
+					</div>
+				</div>
+				<div class="opt">
+					<button type="button" class="btnType1L">사용량 보기</button>
+					<button type="button" class="btnArrow">??</button>
+				</div>
+			</section>
+			
+			<div class="wrapColumn" style="height:430px;">
+
+				<section class="sectionBox" style="width:750px;">
+					<h3 class="subTitle">장애 유형 <button type="button" class="btnTooltip">안내</button></h3>
+					<div class="connectChart">
+						<p class="valTxt">총 장애 건수 <strong class="val">3건</strong></p>
+						<div class="wrapChart">
+							<img src="/wizit/resource/images/temp/img4.jpg" alt="">
+						</div>
+					</div>
+				</section>
+
+				<section class="sectionBox" style="width:1050px;">
+					<h3 class="subTitle">장애 발생 추이 <button type="button" class="btnTooltip">안내</button></h3>
+					<div class="wrapChart">
+						<img src="/wizit/resource/images/temp/img5.jpg" alt="">
+					</div>
+				</section>
+
+			</div>
+
+			<section class="sectionBox">
+				<h3 class="subTitle">
+					당일 검침 데이터
+					<button type="button" class="btnTooltip">안내</button>
+					<select style="width: 130px;">
+						<option>30개씩 보기</option>
+					</select>
+				</h3>
+				<div class="boxInner">
+					<div class="wrapTable typeScroll">
+						<table>
+							<caption>검정 유효기간 정보</caption>
+							<colgroup>
+								<col style="width:40px;">
+								<col style="width:120px;">
+								<col style="width:120px;">
+								<col style="width:120px;">
+								<col style="width:130px;">
+								<col style="width:60px;">
+								<col style="width:60px;">
+								<col style="width:50px;">
+								<col style="width:260px;">
+								<col style="width:260px;">
+								<col style="width:260px;">
+								<col style="width:260px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" rowspan="2" class="bg">No.</th>
+									<th scope="colgroup" colspan="7" class="bg">열량계</th>
+									<th scope="colgroup" colspan="2">통신상태</th>
+									<th scope="colgroup" colspan="2">통신상태</th>
+								</tr>
+								<tr>
+									<th scope="col" class="left line bg">마스터그룹</th>
+									<th scope="col" class="left bg">그룹2</th>
+									<th scope="col" class="left bg">그룹3</th>
+									<th scope="col" class="left bg">열량계이름</th>
+									<th scope="col" class="bg">GW ID</th>
+									<th scope="col" class="bg">Serial</th>
+									<th scope="col" class="bg">종류</th>
+									<th scope="col">통신부</th>
+									<th scope="col">열량계</th>
+									<th scope="col">코드</th>
+									<th scope="col">설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="center">1</td>
+									<td>성남시</td>
+									<td>분당구</td>
+									<td>풍림아이원</td>
+									<td><a href="#">열량계00001</a></td>
+									<td class="center">1</td>
+									<td class="center">1</td>
+									<td class="center">난방</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="center">2</td>
+									<td>성남시</td>
+									<td>분당구</td>
+									<td>풍림아이원</td>
+									<td><a href="#">열량계00001</a></td>
+									<td class="center">1</td>
+									<td class="center">1</td>
+									<td class="center">난방</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="center">3</td>
+									<td>성남시</td>
+									<td>분당구</td>
+									<td>풍림아이원</td>
+									<td><a href="#">열량계00001</a></td>
+									<td class="center">1</td>
+									<td class="center">1</td>
+									<td class="center">난방</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="center">4</td>
+									<td>성남시</td>
+									<td>분당구</td>
+									<td>풍림아이원</td>
+									<td><a href="#">열량계00001</a></td>
+									<td class="center">1</td>
+									<td class="center">1</td>
+									<td class="center">난방</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="center">20</td>
+									<td>성남시</td>
+									<td>분당구</td>
+									<td>풍림아이원</td>
+									<td><a href="#">열량계00001</a></td>
+									<td class="center">1</td>
+									<td class="center">1</td>
+									<td class="center">난방</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="pagination">
+						<a href="#" class="pageNavPrev">이전</a>
+						<strong>1</strong>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#" class="pageNavNext">다음</a>
+					</div>
+
+				</div>
+				<a href="#" class="btnSave">저장</a>
+			</section>
+
+
+		</section>
+
+		<footer id="footer">
+			<div class="wrapCont">
+				<nav class="footLink">
+					<a href="#">서비스 이용약관</a>
+					<a href="#">개인정보처리방침</a>
+					<a href="#">이메일 무단수집거부</a>
+				</nav>
+				<p class="corpInfo">21634) 인천광역시 남동구 남동서로 187 (고잔동, 58B/5L) <span>|</span> TEL. 032-820-9900 <span>|</span> FAX. 032-822-9192</p>
+				<small class="copyright">Copyright &copy; 2020 by WIZIT All rights reserved.</small>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>

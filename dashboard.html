@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>WIZIT</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="/wizit/resource/fonts/font.css">
+	<link rel="stylesheet" href="/wizit/resource/css/common.css">
+	<link rel="stylesheet" href="/wizit/resource/css/ui.css">
+	<script src="/wizit/resource/js/jquery.min.js"></script>
+	<script src="/wizit/resource/js/ui.js"></script>
+</head>
+<body>
+	
+	<div id="wrap">
+
+		<header id="header">
+			<div class="wrapCont">
+				<h1 class="logo">
+					<a href="/wizit/">
+						<img src="/wizit/resource/images/logo.png" alt="WIZIT">
+						<span>산업용 열량계 원격검침 데이터 분석 시스템</span>
+					</a>
+				</h1>
+				<nav>
+					<ul class="gnbList">
+						<li class="gnb1"><a href="dashboard.html">대시보드</a></li>
+						<li class="gnb2"><a href="monitoring.html">모니터링</a></li>
+						<li class="gnb3"><a href="usageAnalysis.html">사용량분석</a></li>
+						<li class="gnb4"><a href="disorderAnalysis.html">장애분석</a></li>
+						<li class="gnb5"><a href="setting.html">설정</a>
+							<div class="subList">
+								<ul>
+									<li><a href="setting.html">열량계 그룹 관리</a></li>
+									<li><a href="setting2.html">열량계 리스트</a></li>
+									<li><a href="setting3.html">사용자/권한 관리</a></li>
+									<li><a href="setting4.html">메뉴 관리</a></li>
+									<li><a href="setting5.html">공통코드 관리</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<ul class="utilList">
+						<li class="util1"><a href="#"><span class="hidden">알림</span><span class="count">20</span></a></li>
+						<li class="util2"><a href="#"><span class="hidden">??</span></a></li>
+						<li class="util3"><a href="#"><span class="hidden">??</span></a></li>
+						<li class="util4"><a href="#"><span class="hidden">??</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="container">
+			<div class="pageHead">
+				<h2 class="pageTitle">대시보드</h2>
+				<p class="baseTime"><span>기준 시간 2020-01-28 22:00:00</span> <button type="button" class="btnTooltip">안내</button></p>
+				<p class="currentTime">현재 시간 2020-01-28 22:00:00</p>
+			</div>
+
+			<div class="wrapColumn" style="height:530px;">
+
+				<section class="sectionBox2" style="width:800px">
+					<h3 class="subTitle">실시간 사용량 <button type="button" class="btnTooltip">안내</button></h3>
+					<div class="wrapProgress">
+						<section class="box">
+							<h4 class="tit">열량</h4>
+							<div class="cont">
+								<p class="progress">
+									<span class="str">이번달</span>
+									<span class="barBack">
+										<span class="bar" style="width:50%;">
+											<strong class="num">184.9</strong>
+										</span>
+									</span>
+								</p>
+								<p class="progress barType2">
+									<span class="str">지난달</span>
+									<span class="barBack">
+										<span class="bar" style="width:90%;">
+											<strong class="num">200.9</strong>
+										</span>
+									</span>
+								</p>
+								<p class="unit"><span class="hidden">단위</span>(KWh)</p>
+							</div>
+						</section>
+						<section class="box">
+							<h4 class="tit">유량</h4>
+							<div class="cont">
+								<p class="progress">
+									<span class="str">이번달</span>
+									<span class="barBack">
+										<span class="bar" style="width:100%;">
+											<strong class="num">68.8</strong>
+										</span>
+									</span>
+								</p>
+								<p class="progress barType2">
+									<span class="str">지난달</span>
+									<span class="barBack">
+										<span class="bar" style="width:20%;">
+											<strong class="num">78.3</strong>
+										</span>
+									</span>
+								</p>
+								<p class="unit"><span class="hidden">단위</span>( ㎥ )</p>
+							</div>
+						</section>
+					</div>
+
+					<div class="wrapUseVal">
+						<div class="box">
+							<p class="item">
+								<span class="tit">공급온도</span>
+								<strong class="val">26.89</strong>
+							</p>
+							<p class="item">
+								<span class="tit">회수온도</span>
+								<strong class="val">21.87</strong>
+							</p>
+							<p class="item">
+								<span class="tit">온도차</span>
+								<strong class="val">±4.94</strong>
+							</p>
+							<p class="unit"><span class="hidden">단위</span>(℃)</p>
+						</div>
+						<div class="box">
+							<p class="item">
+								<span class="tit">압력</span>
+								<strong class="val">16.02</strong>
+							</p>
+							<p class="unit"><span class="hidden">단위</span>(bar)</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="sectionBox2" style="width:1000px">
+					<h3 class="subTitle">실시간 사용량 추이 <button type="button" class="btnTooltip">안내</button></h3>
+					<div class="boxInner">
+						<div class="tab">
+							<button type="button" class="on">열량</button>
+							<button type="button">유량</button>
+							<button type="button">온도</button>
+							<button type="button">압력</button>
+						</div>
+
+						<div class="wrapChart">
+							<img src="/wizit/resource/images/temp/img1.jpg" alt="">
+						</div>
+					</div>
+				</section>
+
+			</div>
+
+			<div class="wrapColumn" style="height:310px;">
+
+				<section class="sectionBox" style="width:1200px;">
+					<h3 class="subTitle">통신 상태 <button type="button" class="btnTooltip">안내</button></h3>
+					<div class="connectChart">
+						<div class="box">
+							<p class="valTxt">통신부 <strong class="val">96.8%</strong></p>
+							<div class="wrapChart">
+								<img src="/wizit/resource/images/temp/img2.jpg" alt="">
+							</div>
+						</div>
+						<div class="box">
+							<p class="valTxt">열량계 <strong class="val">95.6%</strong></p>
+							<div class="wrapChart">
+								<img src="/wizit/resource/images/temp/img2.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<a href="#" class="btnMore">더보기</a>
+				</section>
+
+				<section class="sectionBox" style="width:600px;">
+					<h3 class="subTitle">장애 정보 <button type="button" class="btnTooltip">안내</button></h3>
+					<div class="connectChart">
+						<p class="valTxt">장애 <strong class="val">3건</strong></p>
+						<div class="wrapChart">
+							<img src="/wizit/resource/images/temp/img2.jpg" alt="">
+						</div>
+					</div>
+					<a href="#" class="btnMore">더보기</a>
+				</section>
+
+			</div>
+
+			<div class="wrapColumn" style="height:310px;">
+
+				<section class="sectionBox" style="width:1200px;">
+					<h3 class="subTitle">검정 유효기간 알림 <button type="button" class="btnTooltip">안내</button></h3>
+					<div class="boxInner wrapPeriod">
+						<p class="valTxt">3개월 미만 <strong class="val">3대</strong></p>
+						<div class="wrapTable">
+							<table>
+								<caption>검정 유효기간 정보</caption>
+								<colgroup>
+									<col style="width:40px;">
+									<col style="width:130px;">
+									<col style="width:120px;">
+									<col style="width:160px;">
+									<col style="width:150px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2" class="bg">No.</th>
+										<th scope="colgroup" colspan="4">열량계</th>
+										<th scope="colgroup" colspan="3">검정 유효기간</th>
+									</tr>
+									<tr>
+										<th scope="col" class="left line">마스터그룹</th>
+										<th scope="col" class="left">그룹2</th>
+										<th scope="col" class="left">그룹3</th>
+										<th scope="col" class="left">열량계이름</th>
+										<th scope="col">제조년월</th>
+										<th scope="col">검정 유효기간</th>
+										<th scope="col">남은기간</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="center">1</td>
+										<td>성남시</td>
+										<td>분당구</td>
+										<td>풍림아이원</td>
+										<td>열량계00001</td>
+										<td class="center">20130301</td>
+										<td class="center">20200229</td>
+										<td class="center">32일</td>
+									</tr>
+									<tr>
+										<td class="center">1</td>
+										<td>성남시</td>
+										<td>분당구</td>
+										<td>풍림아이원</td>
+										<td>열량계00001</td>
+										<td class="center">20130301</td>
+										<td class="center">20200229</td>
+										<td class="center">32일</td>
+									</tr>
+									<tr>
+										<td class="center">1</td>
+										<td>성남시</td>
+										<td>분당구</td>
+										<td>풍림아이원</td>
+										<td>열량계00001</td>
+										<td class="center">20130301</td>
+										<td class="center">20200229</td>
+										<td class="center">32일</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+					<a href="#" class="btnMore">더보기</a>
+				</section>
+
+				<section class="sectionBox" style="width:600px;">
+					<h3 class="subTitle">알림</h3>
+					<div class="boxInner">
+						<ul class="noticeList">
+							<li>
+								<a href="#">
+									<span class="num">1</span>
+									<span class="str">열량계00001의 -----기간 사용량이 0 입니다.----기간 사용량이 0 입니다----기간 사용량이 0 입니다..</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="num">2</span>
+									<span class="str">열량계00001의 -----기간 사용량이 0 입니다.</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="num">3</span>
+									<span class="str">열량계00001의 -----기간 사용량이 0 입니다.</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		</section>
+
+		<footer id="footer">
+			<div class="wrapCont">
+				<nav class="footLink">
+					<a href="#">서비스 이용약관</a>
+					<a href="#">개인정보처리방침</a>
+					<a href="#">이메일 무단수집거부</a>
+				</nav>
+				<p class="corpInfo">21634) 인천광역시 남동구 남동서로 187 (고잔동, 58B/5L) <span>|</span> TEL. 032-820-9900 <span>|</span> FAX. 032-822-9192</p>
+				<small class="copyright">Copyright &copy; 2020 by WIZIT All rights reserved.</small>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>

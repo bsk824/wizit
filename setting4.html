@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>WIZIT</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="/wizit/resource/fonts/font.css">
+	<link rel="stylesheet" href="/wizit/resource/css/common.css">
+	<link rel="stylesheet" href="/wizit/resource/css/ui.css">
+	<script src="/wizit/resource/js/jquery.min.js"></script>
+	<script src="/wizit/resource/js/ui.js"></script>
+</head>
+<body>
+	
+	<div id="wrap">
+
+		<header id="header">
+			<div class="wrapCont">
+				<h1 class="logo">
+					<a href="/wizit/">
+						<img src="/wizit/resource/images/logo.png" alt="WIZIT">
+						<span>산업용 열량계 원격검침 데이터 분석 시스템</span>
+					</a>
+				</h1>
+				<nav>
+					<ul class="gnbList">
+						<li class="gnb1"><a href="dashboard.html">대시보드</a></li>
+						<li class="gnb2"><a href="monitoring.html">모니터링</a></li>
+						<li class="gnb3"><a href="usageAnalysis.html">사용량분석</a></li>
+						<li class="gnb4"><a href="disorderAnalysis.html">장애분석</a></li>
+						<li class="gnb5"><a href="setting.html">설정</a>
+							<div class="subList">
+								<ul>
+									<li><a href="setting.html">열량계 그룹 관리</a></li>
+									<li><a href="setting2.html">열량계 리스트</a></li>
+									<li><a href="setting3.html">사용자/권한 관리</a></li>
+									<li><a href="setting4.html">메뉴 관리</a></li>
+									<li><a href="setting5.html">공통코드 관리</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<ul class="utilList">
+						<li class="util1"><a href="#"><span class="hidden">알림</span><span class="count">20</span></a></li>
+						<li class="util2"><a href="#"><span class="hidden">??</span></a></li>
+						<li class="util3"><a href="#"><span class="hidden">??</span></a></li>
+						<li class="util4"><a href="#"><span class="hidden">??</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="container">
+			<div class="pageHead">
+				<h2 class="pageTitle">메뉴 관리</h2>
+				<p class="currentTime">현재 시간 2020-01-28 22:00:00</p>
+			</div>
+
+			<section class="sectionBox">
+				<div class="subHead">
+					<span class="cellRight">
+						<button type="button" class="btnType1M">순서저장</button>
+						<button type="button" class="btnType2M" onclick="layer.open('menuSet');">등록</button>
+					</span>
+				</div>
+
+				<div class="boxInner">
+					<div class="wrapTable">
+						<table>
+							<caption>메뉴 설정</caption>
+							<colgroup>
+								<col style="width:190px;">
+								<col style="width:180px;">
+								<col style="width:80px;">
+								<col style="width:80px;">
+								<col style="width:500px;">
+								<col style="width:580px;">
+								<col style="width:80px;">
+								<col style="width:80px;">
+							</colgroup>
+							<thead class="theadType2">
+								<tr>
+									<th scope="col" class="bg left">메뉴ID</th>
+									<th scope="col" class="bg left">메뉴명</th>
+									<th scope="col" class="bg left">노출여부</th>
+									<th scope="col" class="bg left">사용여부</th>
+									<th scope="col" class="bg left">아이콘</th>
+									<th scope="col" class="bg left">메뉴URL</th>
+									<th scope="col" class="bg">수정</th>
+									<th scope="col" class="bg">삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="depth1">dashboard</td>
+									<td>DASHBOARD</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth1">monitoring</td>
+									<td>모니터링</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth1">amount</td>
+									<td>사용량분석</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth2">period</td>
+									<td>기간별 사용량</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth1">obstacle</td>
+									<td>장애분석</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth2">boardConfig</td>
+									<td>게시판정보</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth1">master</td>
+									<td>게시판환경설정</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth2">calGroup</td>
+									<td>설정</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth2">cal</td>
+									<td>열량계그룹관리</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth2">manager</td>
+									<td>열량계 리스트</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth2">manu</td>
+									<td>메뉴관리</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td></td>
+									<td></td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth2">code</td>
+									<td>사용자 및 권한관리</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td>kt-menu__link-bullet kt-menu__link-bullet--line</td>
+									<td>/master/menu/menuList</td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+								<tr>
+									<td class="depth2"></td>
+									<td>공통코드 관리</td>
+									<td>Y</td>
+									<td>Y</td>
+									<td>kt-menu__link-bullet kt-menu__link-bullet--line</td>
+									<td>/master/menu/menuList</td>
+									<td class="center"><button type="button" class="btnType3S">수정</button></td>
+									<td class="center"><button type="button" class="btnType6S">삭제</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</section>
+
+		</section>
+
+		<!-- 메뉴 등록 레이어 -->
+		<section class="layerMenuSet" id="menuSet">
+			<div class="wrapMenuSet">
+				<h3 class="tit">메뉴 등록</h3>
+
+				<div class="inner">
+
+					<label for="menuSet1">상위 메뉴 ID</label>
+					<select id="menuSet1">
+						<option value="">선택</option>
+					</select>
+					
+					<label for="menuSet2">메뉴 ID</label>
+					<select id="menuSet2">
+						<option value="">선택</option>
+					</select>
+
+					<label for="menuSet3">메뉴명</label>
+					<select id="menuSet3">
+						<option value="">메뉴명</option>
+					</select>
+					
+					<label for="menuSet4">메뉴 URL</label>
+					<select id="menuSet4">
+						<option value="">메뉴 URL</option>
+					</select>
+					<p class="helpTxt">* 대메뉴일시 #입력</p>
+					
+					<label for="menuSet5">메뉴 ICON</label>
+					<select id="menuSet5">
+						<option value="">fa-를 포함한 메뉴 아이콘(ex:fa-address-book)</option>
+					</select>
+
+					<label for="menuSet6">노출여부</label>
+					<select id="menuSet6">
+						<option value="">선택</option>
+					</select>
+					
+					<label for="menuSet7">사용여부</label>
+					<select id="menuSet7">
+						<option value="">선택</option>
+					</select>
+
+					<label for="menuSet8">Text area</label>
+					<textarea id="menuSet8" cols="30" rows="5" placeholder="텍스트를 입력하세요."></textarea>
+
+					<div class="btnWrap">
+						<span class="btnRight">
+							<button type="button" class="btnType3M" onclick="layer.close('menuSet');">닫기</button>
+							<button type="button" class="btnType2M">등록</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //메뉴 등록 레이어 -->
+
+		<footer id="footer">
+			<div class="wrapCont">
+				<nav class="footLink">
+					<a href="#">서비스 이용약관</a>
+					<a href="#">개인정보처리방침</a>
+					<a href="#">이메일 무단수집거부</a>
+				</nav>
+				<p class="corpInfo">21634) 인천광역시 남동구 남동서로 187 (고잔동, 58B/5L) <span>|</span> TEL. 032-820-9900 <span>|</span> FAX. 032-822-9192</p>
+				<small class="copyright">Copyright &copy; 2020 by WIZIT All rights reserved.</small>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>

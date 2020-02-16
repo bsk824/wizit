@@ -10,7 +10,7 @@ body {
 	-webkit-text-size-adjust: none;
 }
 h1,h2,h3,h4,h5,h6,p,figure,ul,ol,dl,dd,fieldset {margin: 0;}
-ol, ul, fieldset {padding: 0;}
+ol, ul, td, fieldset {padding: 0;}
 input, select, textarea, button, pre, a {
 	font-family: inherit;
 	font-size: inherit;
@@ -50,31 +50,54 @@ pre {white-space: pre-wrap;}
 article,aside,canvas,details,figcaption,figure,footer,header,hgroup,nav,menu,section,main {display: block;}
 
 select {
-	background: none;
-	border: 0;
+	height: 35px;
+	padding: 0 25px 0 8px;
 	-webkit-appearance: none;
+	border: 1px solid #6d779a;
+	border-radius: 4px;
+	background: #232b4b url('/wizit/resource/images/ico_select_arrow.png') no-repeat 100% 50%;
+	font-size: 15px;
+	font-weight: 400;
+	color: #fff;
+	vertical-align: middle;
 }
 select::-ms-expand {display: none;}
 textarea {
-	padding: 10px;
-	border: 1px solid #dcdcdc;
+	padding: 5px 8px;
+	background: #232b4b;
+	border: 1px solid #6d779a;
 	box-sizing: border-box;
 	resize: none;
+	border-radius: 4px;
+	overflow: auto;
 }
 .inputTxt {
-	height: 40px;
+	height: 35px;
 	padding: 0 8px;
-	border: 1px solid #dcdcdc;
+	background: #232b4b;
+	border: 1px solid #6d779a;
 	box-sizing: border-box;
 	vertical-align: middle;
 	-webkit-appearance: none;
-	border-radius: 0;
+	border-radius: 4px;
 }
+textarea::placeholder {
+	color: #fff;
+	font-size: 15px;
+}
+.inputTxt::placeholder {color: #fff;}
+.inputTxt::-ms-input-placeholder {color: #fff;}
+.inputTxt:-ms-input-placeholder {color: #fff;}
+.inputTxt::-msClear {display: none;}
 
-#header, #footer {background: #11151e;}
+#header, #footer {
+	min-width: 1920px;
+	background: #11151e;
+}
 #header .wrapCont {
 	position: relative;
 	height: 65px;
+	z-index: 100;
 }
 #header .logo {
 	position: absolute;
@@ -82,7 +105,10 @@ textarea {
 	font-size: 15px;
 	font-weight: 300;
 }
-#header .logo img {vertical-align: middle;}
+#header .logo img {
+	vertical-align: middle;
+	margin-right: 4px;
+}
 #header .logo:after {
 	content: "";
 	display: inline-block;
@@ -180,13 +206,321 @@ textarea {
 }
 
 #container {
-	width: 1820px;
+	width: 1820px; min-height: 800px;
 	margin: 0 auto;
-	padding: 0 50px 50px;
+	padding: 0 50px 30px;
+}
+
+.btnTooltip {
+	display: inline-block;
+	width: 18px; height: 18px;
+	font-size: 0;
+	background: url('/wizit/resource/images/btn_tooltip.png') no-repeat;
+	vertical-align: middle;
+}
+.btnMore {
+	display: inline-block;
+	padding-left: 30px;
+	background: url('/wizit/resource/images/btn_more.png') no-repeat 0 50%;
+	line-height: 20px;
+}
+.btnSave {
+	display: inline-block;
+	padding-left: 30px;
+	background: url('/wizit/resource/images/btn_save.png') no-repeat 0 50%;
 }
 
 .wrapCont {
 	width: 1920px;
 	margin: 0 auto;
 	box-sizing: border-box;
+}
+
+.pageHead {
+	position: relative;
+	padding: 20px 0;
+}
+.pageHead .pageTitle {font-size: 30px;}
+.pageHead .baseTime {
+	position: absolute;
+	top: 28px; right: 0; left: 0;
+	font-size: 17px;
+	color: #ffd68f;
+	text-align: center;
+}
+.pageHead .baseTime:before {
+	content: "";
+	display: inline-block;
+	width: 21px; height: 20px;
+	background: url('/wizit/resource/images/ico_time.png') no-repeat;
+	vertical-align: middle;
+}
+.pageHead .baseTime span {
+	display: inline-block;
+	margin: 0 8px;
+	vertical-align: -1px;
+}
+.pageHead .currentTime {
+	position: absolute;
+	top: 28px; right: 0;
+	font-size: 17px;
+	font-weight: 300;
+}
+
+[class*="sectionBox"] {
+	position: relative;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	background: #283147;
+}
+.sectionBox2 {background: #323e6b;}
+.sectionBox3 {background: #fff;}
+
+[class*="sectionBox"] .boxInner {padding: 20px 25px;}
+[class*="sectionBox"] .btnMore,
+[class*="sectionBox"] .btnSave {
+	position: absolute;
+	top: 25px; right: 25px;
+}
+[class*="sectionBox"] .valTxt {
+	font-size: 20px;
+	line-height: 1.3;
+}
+[class*="sectionBox"] .valTxt .val {
+	display: block;
+	font-size: 35px;
+}
+
+.subHead {
+	padding: 18px 24px;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+.subHead:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.subHead .cell {display: inline-block;}
+.subHead .cell + .cell {margin-left: 45px;}
+.subHead .cellRight {float: right;}
+
+.subHead .tit {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	font-size: 22px;
+	font-weight: 300;
+	vertical-align: -4px;
+} 
+
+.subTitle {
+	padding: 18px 0 18px 24px;
+	font-size: 22px;
+	font-weight: 300;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+.subTitle .btnTooltip {
+	margin-left: 4px;
+	vertical-align: 7px;
+}
+.subTitle select {
+	margin-left: 25px;
+}
+
+.wrapColumn {margin-bottom: 20px;}
+.wrapColumn:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.wrapColumn [class*="sectionBox"] {
+	float: left;
+	height: 100%;
+	margin-bottom: 0;
+}
+.wrapColumn [class*="sectionBox"] + [class*="sectionBox"] {margin-left: 20px;}
+
+/* tab */
+.tab button {
+	width: 80px; height: 40px;
+	background: #2b355b;
+	border-radius: 4px;
+}
+.tab button.on {background: #5c77ff;}
+
+/* table */
+.wrapTable {
+	overflow: hidden;
+	border-radius: 5px;
+}
+.wrapTable.typeScroll {overflow-x: auto;}
+.wrapTable.typeScroll table {min-width: 100%;}
+.wrapTable .left {text-align: left;}
+.wrapTable .center {text-align: center;}
+.wrapTable .right {text-align: right;}
+.wrapTable thead th {
+	padding: 8px;
+	background: #39466b;
+	border-top: 1px solid #8e92a6;
+	border-left: 1px solid #8e92a6;
+	box-sizing: border-box;
+}
+.wrapTable .theadType2 th {height: 52px;}
+.wrapTable thead tr:first-child th {border-top: 0;}
+.wrapTable thead th:first-child {border-left: 0;}
+.wrapTable thead th.line {border-left: 1px solid #8e92a6;}
+.wrapTable thead th.bg {background: #425ad3;}
+.wrapTable .btnAlign {
+	float: right;
+	width: 11px; height: 15px;
+	margin-top: 3px;
+	background: url('/wizit/resource/images/btn_align.png') no-repeat;
+	font-size: 0;
+}
+.wrapTable td {
+	height: 40px;
+	padding: 8px;
+	box-sizing: border-box;
+	background: #fff;
+	color: #4c4c4c;
+	font-weight: 300;
+	border-top: 1px solid #c8ccd5;
+	border-left: 1px solid #c8ccd5;
+}
+.wrapTable td.depth1 {font-weight: 500;}
+.wrapTable td.depth2 {padding-left: 30px;}
+.wrapTable tr:first-child td {border-top: 0;}
+.wrapTable td:first-child {border-left: 0;}
+.wrapTable td.line {border-left: 1px solid #c8ccd5;}
+.wrapTable td a {
+	text-decoration: underline;
+	color: #5c77ff;
+}
+
+/* pagination */
+.pagination {
+	margin: 20px 0 0;
+	text-align: center;
+}
+.pagination [class*="pageNav"] {
+	background: #354162 url('/wizit/resource/images/btn_page_nav.png') no-repeat;
+	font-size: 0;
+}
+.pagination .pageNavNext {background-position: 100% 0;}
+.pagination a,
+.pagination strong {
+	display: inline-block;
+	width: 40px; line-height: 40px;
+	margin: 0 4px;
+	font-size: 16px;
+	font-weight: 400;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.pagination strong {background: #5c77ff;}
+
+/* btn */
+.btnWrap {
+	margin: 20px 0 0;
+	text-align: center;
+}
+.btnRight {float: right;}
+[class*="btnType"] {
+	display: inline-block;
+	border-radius: 4px;
+	vertical-align: middle;
+	color: #fff;
+}
+[class*="btnType1"] {background: #ff545d;}
+[class*="btnType2"] {background: #5c77ff;}
+[class*="btnType3"] {background: #38467f;}
+[class*="btnType4"] {background: #ff900e;}
+[class*="btnType5"] {background: #009688;}
+[class*="btnType6"] {background: #6d779a;}
+.btnType1S, .btnType2S, .btnType3S, .btnType4S, .btnType5S, .btnType6S {
+	padding: 0 16px;
+	height: 29x;
+	line-height: 29px;
+	font-size: 15px;
+}
+.btnType1M, .btnType2M, .btnType3M, .btnType4M, .btnType5M, .btnType6M {
+	padding: 0 20px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 15px;
+}
+.btnType1L, .btnType2L, .btnType3L, .btnType4L, .btnType5L, .btnType6L {
+	padding: 0 25px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 17px;
+}
+[class*="btnType"].typePlus:before {
+	content: "";
+	display: inline-block;
+	width: 15px; height: 15px;
+	margin-right: 8px;
+	background: url('/wizit/resource/images/btn_plus.png') no-repeat;
+}
+[class*="btnType"].typePlus2:before {
+	content: "";
+	display: inline-block;
+	width: 13px; height: 13px;
+	margin-right: 8px;
+	background: url('/wizit/resource/images/btn_plus2.png') no-repeat;
+	vertical-align: -1px;
+}
+[class*="btnType"].typeMinus2:before {
+	content: "";
+	display: inline-block;
+	width: 13px; height: 13px;
+	margin-right: 8px;
+	background: url('/wizit/resource/images/btn_minus2.png') no-repeat 50% 50%;
+	vertical-align: -1px;
+}
+[class*="btnType"].typeSearch:before {
+	content: "";
+	display: inline-block;
+	width: 17px; height: 17px;
+	margin-right: 8px;
+	background: url('/wizit/resource/images/btn_search.png') no-repeat 50% 50%;
+	vertical-align: -3px;
+}
+[class*="btnType"].typeClear:before {
+	content: "";
+	display: inline-block;
+	width: 16px; height: 16px;
+	margin-right: 8px;
+	background: url('/wizit/resource/images/btn_clear.png') no-repeat 50% 50%;
+	vertical-align: -2px;
+}
+
+
+.btnCal {
+	width: 35px; height: 35px;
+	background: #5c77ff url('/wizit/resource/images/btn_cal.png') no-repeat 50% 50%;
+	border-radius: 4px;
+	font-size: 0;
+	vertical-align: middle;
+}
+
+/* layer */
+.layerPop {
+	display: none;
+	position: absolute;
+	background: #283147;
+	border: 1px solid #6d779a;
+	border-radius: 4px;
+	z-index: 1000;
+}
+.layerTitle {
+	padding: 9px 20px;
+	border-bottom: 1px solid #9498a3;
+}
+.layerContents {padding: 20px;}
+.layerPop .btnClose {
+	position: absolute;
+	top: 15px; right: 20px;
+	width: 13px; height: 13px;
+	font-size: 0;
+	background: url('/wizit/resource/images/btn_layer_close.png') no-repeat;
 }

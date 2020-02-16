@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>WIZIT</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="/wizit/resource/fonts/font.css">
+	<link rel="stylesheet" href="/wizit/resource/css/common.css">
+	<link rel="stylesheet" href="/wizit/resource/css/ui.css">
+	<script src="/wizit/resource/js/jquery.min.js"></script>
+	<script src="/wizit/resource/js/ui.js"></script>
+</head>
+<body>
+	
+	<div id="wrap">
+
+		<header id="header">
+			<div class="wrapCont">
+				<h1 class="logo">
+					<a href="/wizit/">
+						<img src="/wizit/resource/images/logo.png" alt="WIZIT">
+						<span>산업용 열량계 원격검침 데이터 분석 시스템</span>
+					</a>
+				</h1>
+				<nav>
+					<ul class="gnbList">
+						<li class="gnb1"><a href="dashboard.html">대시보드</a></li>
+						<li class="gnb2"><a href="monitoring.html">모니터링</a></li>
+						<li class="gnb3"><a href="usageAnalysis.html">사용량분석</a></li>
+						<li class="gnb4"><a href="disorderAnalysis.html">장애분석</a></li>
+						<li class="gnb5"><a href="setting.html">설정</a>
+							<div class="subList">
+								<ul>
+									<li><a href="setting.html">열량계 그룹 관리</a></li>
+									<li><a href="setting2.html">열량계 리스트</a></li>
+									<li><a href="setting3.html">사용자/권한 관리</a></li>
+									<li><a href="setting4.html">메뉴 관리</a></li>
+									<li><a href="setting5.html">공통코드 관리</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<ul class="utilList">
+						<li class="util1"><a href="#"><span class="hidden">알림</span><span class="count">20</span></a></li>
+						<li class="util2"><a href="#"><span class="hidden">??</span></a></li>
+						<li class="util3"><a href="#"><span class="hidden">??</span></a></li>
+						<li class="util4"><a href="#"><span class="hidden">??</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="container">
+			<div class="pageHead">
+				<h2 class="pageTitle">열량계 그룹 관리</h2>
+				<p class="currentTime">현재 시간 2020-01-28 22:00:00</p>
+			</div>
+
+			<section class="sectionBox">
+				<div class="subHead">
+					<span class="cell">
+						<label for="masterGroup" class="tit">마스터 레벨 그룹</label>
+						<input type="text" id="masterGroup" class="inputTxt" placeholder="그룹 이름을 입력하세요." style="width: 180px;">
+						<button type="button" class="btnType2M">만들기</button>
+					</span>
+					<span class="cell">
+						<label for="subGroup" class="tit">하위 레벨 그룹</label>
+						<select id="subGroup" style="width: 180px;">
+							<option value="">레벨을 선택하세요.</option>
+						</select>
+						<select style="width: 180px;">
+							<option value="">상위 레벨을 선택하세요.</option>
+						</select>
+						<input type="text" class="inputTxt" placeholder="그룹 이름을 입력하세요." style="width: 180px;">
+						<button type="button" class="btnType2M">만들기</button>
+					</span>
+					<span class="cellRight">
+						<button type="button" class="btnType1M typePlus2">모두열기</button>
+						<button type="button" class="btnType1M typeMinus2">모두닫기</button>
+					</span>
+				</div>
+				<div class="boxInner">
+					<div class="levelList">
+						<div class="thead">
+							<div style="width:50px;"><span>#</span></div>
+							<div style="width:310px;"><span>마스터 레벨</span></div>
+							<div style="width:300px;"><span>두번째 레벨</span></div>
+							<div style="width:300px;"><span>세번째 레벨</span></div>
+							<div style="width:300px;"><span>열량계</span></div>
+							<div style="width:300px;"><span>ID</span></div>
+							<div style="width:210px;"><span>정보보기/수정</span></div>
+						</div>
+						<ul class="tbody">
+							<!-- 마스터 레벨 -->
+							<li>
+								<div>
+									<span class="num">1</span>
+									<span class="cell name">서울지역난방공사</span>
+									<span class="cell"><button type="button" class="btnDepth" onclick="depthToggle();">열기/닫기</button></span>
+									<span class="rightCell">
+										<span class="cell">asd32222</span>
+										<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+									</span>
+								</div>
+								<!-- 두번째 레벨 -->
+								<ul class="subDepth">
+									<li>
+										<div>
+											<span class="cell name">서울시 성동구</span>
+											<span class="cell"><button type="button" class="btnDepth" onclick="depthToggle();">열기/닫기</button></span>
+											<span class="rightCell">
+												<span class="cell">asd32222</span>
+												<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+											</span>
+										</div>
+										<!-- 세번째 레벨 -->
+										<ul class="subDepth">
+											<li>
+												<div>
+													<span class="cell name">논현동 힐스테이트</span>
+													<span class="cell"><button type="button" class="btnDepth" onclick="depthToggle();">열기/닫기</button></span>
+													<span class="rightCell">
+														<span class="cell">asd32222</span>
+														<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+													</span>
+												</div>
+												<!-- 열량계 -->
+												<ul class="subDepth">
+													<li>
+														<div>
+															<span class="cell name">열량계0001</span>
+															<span class="rightCell">
+																<span class="cell">asd32222</span>
+																<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div>
+															<span class="cell name">열량계0001</span>
+															<span class="rightCell">
+																<span class="cell">asd32222</span>
+																<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+															</span>
+														</div>
+													</li>
+												</ul>
+												<!-- //열량계 -->
+											</li>
+										</ul>
+										<!-- //세번째 레벨 -->
+									</li>
+								</ul>
+								<!-- //두번째 레벨 -->
+							</li>
+							<!-- //마스터 레벨 -->
+
+							<!-- 마스터 레벨 -->
+							<li class="open">
+								<div>
+									<span class="num">2</span>
+									<span class="cell name">경기지역난방공사</span>
+									<span class="cell"><button type="button" class="btnDepth" onclick="depthToggle();">열기/닫기</button></span>
+									<span class="rightCell">
+										<span class="cell">asd32222</span>
+										<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+									</span>
+								</div>
+								<!-- 두번째 레벨 -->
+								<ul class="subDepth">
+									<li class="open">
+										<div>
+											<span class="cell name">경기도 성남시 분당구</span>
+											<span class="cell"><button type="button" class="btnDepth" onclick="depthToggle();">열기/닫기</button></span>
+											<span class="rightCell">
+												<span class="cell">asd32222</span>
+												<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+											</span>
+										</div>
+										<!-- 세번째 레벨 -->
+										<ul class="subDepth">
+											<li class="open">
+												<div>
+													<span class="cell name">논현동 힐스테이트</span>
+													<span class="cell"><button type="button" class="btnDepth" onclick="depthToggle();">열기/닫기</button></span>
+													<span class="rightCell">
+														<span class="cell">asd32222</span>
+														<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+													</span>
+												</div>
+												<!-- 열량계 -->
+												<ul class="subDepth">
+													<li>
+														<div>
+															<span class="cell name">열량계0001</span>
+															<span class="rightCell">
+																<span class="cell">asd32222</span>
+																<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div>
+															<span class="cell name">열량계0001</span>
+															<span class="rightCell">
+																<span class="cell">asd32222</span>
+																<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+															</span>
+														</div>
+													</li>
+												</ul>
+												<!-- //열량계 -->
+											</li>
+										</ul>
+										<!-- //세번째 레벨 -->
+									</li>
+
+									<li>
+										<div>
+											<span class="cell name">경기도 성남시 수정구</span>
+											<span class="cell"><button type="button" class="btnDepth" onclick="depthToggle();">열기/닫기</button></span>
+											<span class="rightCell">
+												<span class="cell">asd32222</span>
+												<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+											</span>
+										</div>
+										<!-- 세번째 레벨 -->
+										<ul class="subDepth">
+											<li>
+												<div>
+													<span class="cell name">논현동 힐스테이트</span>
+													<span class="cell"><button type="button" class="btnDepth" onclick="depthToggle();">열기/닫기</button></span>
+													<span class="rightCell">
+														<span class="cell">asd32222</span>
+														<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+													</span>
+												</div>
+												<!-- 열량계 -->
+												<ul class="subDepth">
+													<li>
+														<div>
+															<span class="cell name">열량계0001</span>
+															<span class="rightCell">
+																<span class="cell">asd32222</span>
+																<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div>
+															<span class="cell name">열량계0001</span>
+															<span class="rightCell">
+																<span class="cell">asd32222</span>
+																<span class="btn"><button type="button" class="btnType4S">정보보기/수정</button></span>
+															</span>
+														</div>
+													</li>
+												</ul>
+												<!-- //열량계 -->
+											</li>
+										</ul>
+										<!-- //세번째 레벨 -->
+									</li>
+
+								</ul>
+								<!-- //두번째 레벨 -->
+							</li>
+							<!-- //마스터 레벨 -->
+							
+						</ul>
+					</div>
+
+				</div>
+			</section>
+
+
+		</section>
+
+		<footer id="footer">
+			<div class="wrapCont">
+				<nav class="footLink">
+					<a href="#">서비스 이용약관</a>
+					<a href="#">개인정보처리방침</a>
+					<a href="#">이메일 무단수집거부</a>
+				</nav>
+				<p class="corpInfo">21634) 인천광역시 남동구 남동서로 187 (고잔동, 58B/5L) <span>|</span> TEL. 032-820-9900 <span>|</span> FAX. 032-822-9192</p>
+				<small class="copyright">Copyright &copy; 2020 by WIZIT All rights reserved.</small>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>
